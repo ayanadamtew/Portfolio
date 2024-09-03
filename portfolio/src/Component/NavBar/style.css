@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #4a90e2;   /* Vibrant blue */
+    --secondary-color: #f95d6a; /* Coral red */
+    --background-color: #d0cef0; /* Soft lavender */
+    --text-color: #333;         /* Dark gray for text */
+    --hover-color: #fbbd23;     /* Warm yellow for hover */
+    --menu-background-color: #ffffff; /* Pure white for mobile menu background */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.navbar {
+    background-color: var(--background-color);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    font-family: 'Roboto', sans-serif; 
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--secondary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.item {
+    margin-right: 2rem;
+}
+
+.links {
+    padding: 0.6rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.links:hover {
+    color: var(--hover-color);
+    font-weight: bold;
+}
+
+.nav_icons {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: var(--menu-background-color);
+        padding: 10px;
+        box-shadow: 0 8px 16px var(--shadow-color);
+        left: -5%;
+        transition: all 0.8s ease;
+    }
+
+    .menu.active {
+        display: flex; 
+    }
+
+    .item {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .nav_icons {
+        display: block; 
+    }
+}
