@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInfoCircleFill } from 'react-icons/bs';
+import { MdOutlineEmail } from 'react-icons/md';
 import PageHeaderContent from '../../Component/pageHeaderContent';
 import { Animate } from 'react-simple-animate';
 import './contact.css';
@@ -9,7 +9,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <PageHeaderContent
         headerText="Contact"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<MdOutlineEmail size={40} />}
       />
       <div className="contact_content">
         <Animate
@@ -33,12 +33,7 @@ const Contact = () => {
           <div className="form">
             <div className="controlsWrapper">
               <div>
-                <input
-                  required
-                  name="name"
-                  className="inputName"
-                  type="text"
-                />
+                <input required name="name" className="inputName" type="text" />
                 <label htmlFor="name" className="nameLabel">
                   Name:
                 </label>

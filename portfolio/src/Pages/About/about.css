@@ -58,32 +58,50 @@ ul li {
   border-radius: 50%;
   border: 1.5px solid #4a90e2;
   animation: rotation 10s linear 1s infinite;
-  div:nth-child(1) {
-    position: absolute;
-    top: -8%;
-    left: 41%;
-  }
-  div:nth-child(2) {
-    position: absolute;
-    right: -8%;
-    top: 41.5%;
-  }
-  div:nth-child(3) {
-    position: absolute;
-    bottom: -7%;
-    left: 41%;
-  }
-  div:nth-child(4) {
-    position: absolute;
-    left: -8%;
-    top: 41%;
-  }
 }
+
+.innerContent div {
+  position: absolute;
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #4a90e2;
+  text-align: center;
+}
+
+.innerContent div:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.innerContent div:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.innerContent div:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.innerContent div:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
 @keyframes rotation {
   100% {
     transform: rotate(360deg);
   }
 }
+
 @media only screen and (max-width: 768px) {
   .about__content {
     flex-direction: column;
@@ -99,25 +117,35 @@ ul li {
     width: 250px;
     height: 250px;
     background: radial-gradient(100px, #4a90e2, transparent 120%);
-    div:nth-child(1) {
-      position: absolute;
-      top: -15%;
-      left: 38%;
-    }
-    div:nth-child(2) {
-      position: absolute;
-      right: -11%;
-      top: 40%;
-    }
-    div:nth-child(3) {
-      position: absolute;
-      bottom: -12%;
-      left: 40%;
-    }
-    div:nth-child(4) {
-      position: absolute;
-      left: -12%;
-      top: 40%;
-    }
+  }
+
+  .innerContent div {
+    width: 60px; /* Adjust for smaller screens */
+    height: 60px; /* Adjust for smaller screens */
+    font-size: 12px; /* Adjust for smaller screens */
+  }
+
+  .innerContent div:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .innerContent div:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .innerContent div:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .innerContent div:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
   }
 }

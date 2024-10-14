@@ -1,0 +1,156 @@
+.projects_content {
+  padding: 20px;
+}
+
+.text {
+  color: #4a90e2;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  border-bottom: 3px solid #4a90e2;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.projects_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-out;
+}
+
+.project_card {
+  border: 2px solid #4a90e2;
+  padding: 20px;
+  background-color: transparent;
+  color: #4a90e2;
+  transition: all 0.3s ease;
+  animation: slideInFromBottom 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.project_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.project_image_container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.project_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project_card:hover .project_image {
+  transform: scale(1.05);
+}
+
+.project_card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project_card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tech_tag {
+  background-color: rgba(74, 144, 226, 0.2);
+  color: #4a90e2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.project_link {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
+  color: #4a90e2;
+  border: 1.5px solid #4a90e2;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.project_link:hover {
+  color: black;
+  background-color: #4a90e2;
+  animation: pulse 0.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInfoCircleFill } from 'react-icons/bs';
+import { FaUser } from 'react-icons/fa';
 import PageHeaderContent from '../../Component/pageHeaderContent';
 import { Animate } from 'react-simple-animate';
 import { Value } from 'sass';
@@ -35,10 +35,7 @@ const AboutMe =
 const About = () => {
   return (
     <section id="about" className="about">
-      <PageHeaderContent
-        headerText="About Me"
-        icon={<BsInfoCircleFill size={40} />}
-      />
+      <PageHeaderContent headerText="About Me" icon={<FaUser size={40} />} />
       <div className="about__content">
         <div className="personallWrapper">
           <Animate

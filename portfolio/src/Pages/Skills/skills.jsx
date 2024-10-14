@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInfoCircleFill } from 'react-icons/bs';
+import { FaLaptopCode } from 'react-icons/fa';
 import { BsCheckCircleFill } from 'react-icons/bs'; // Import the tick icon
 import PageHeaderContent from '../../Component/pageHeaderContent';
 import { Animate } from 'react-simple-animate';
@@ -12,7 +12,7 @@ const skillsData = [
   },
   {
     category: 'Frameworks and Libraries',
-    skills: ['React', 'Nest', 'Tailwind'],
+    skills: ['React', 'Nest', 'Tailwind', 'Node', 'Express'],
   },
   {
     category: 'Databases',
@@ -29,7 +29,7 @@ const Skills = () => {
     <section id="skills" className="skills">
       <PageHeaderContent
         headerText="My Skills"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<FaLaptopCode size={40} />}
       />
       <div className="technical-skills">
         {skillsData.map((category, index) => (
