@@ -6,6 +6,7 @@ import './project.css'
 import image1 from './project1.png'
 import image2 from './project2.png'
 import image3 from './project3.png'
+import image4 from './project4.png'
 
 const projects = [
   {
@@ -27,7 +28,7 @@ const projects = [
     description: "Picshare is an easy-to-use platform for sharing images, developed with React, HTML, and Tailwind CSS, where users can seamlessly upload and share their photos after signing in with their Google account, providing a secure and enjoyable experience for all.",
     technologies: ["React", "TailWind", "HTML"],
     link: "https://github.com/ayanadamtew/PicShare.git",
-    image: "/placeholder.svg?height=200&width=300"
+    image: image4
   },
   {
     title: "AyuMovies",
